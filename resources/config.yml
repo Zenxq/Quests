@@ -3,52 +3,51 @@
 # {QUEST} = Name of the quest. Only where they are!
 # Types : move, breakblock, placeblock, kills
 
-category-select-title: "Quests"
+category-select-title: "§l§iQuests"
 category-select-content: "Please select a category"
 quest-select-content: "Please choose a quest"
-finished-quest-message: "§l§2..§e[§dQuest§e]§2..§r§f GG, you finished the quest : {QUEST}"
+finished-quest-message: "§7You finished the quest §6{QUEST}"
 button-leave: "Leave"
 button-info-start: "Start the quest"
 button-info-pause: "Stop the quest"
-quest-already-finished: "§l§2..§e[§dQuest§e]§2..§r§f You have already finished this quest!"
-paused-quest: "You stopped the quest : {QUEST}"
-started-quest: "You started the quest : {QUEST}"
+quest-already-finished: "§cYou have already finished this quest!"
+paused-quest: "§7You stopped the quest §6{QUEST}"
+started-quest: "§7You started the quest §6{QUEST}"
 quest-opened: "Not started"
-quest-inprogress: "§aCurrent quest"
-quest-finished: "§6Completed"
+quest-inprogress: "Current quest"
+quest-finished: "Completed"
 
 categories:
   General: # Category Name
-    cuttree: # Quest Name (config only)
+    Lumberjack: # Quest Name (config only)
       name: "Example 1" # Quest Name (in-game)
-      description: "Break 5 wood" # Description
+      description: "Break 75 Stone" # Description
       type: breakblock # Type
-      block: "17" # Block they need to break/place/etc
-      number: 5 # Number of blocks they need to break/place/etc
+      block: "1" # Block they need to break/place/etc
+      number: 75 # Number of blocks they need to break/place/etc
       rewards: # Rewards are given by commands, you can give anything rank by a command
-        - "give {PLAYER} dirt 64"
-        - "say {PLAYER} just finished a quest"
-    voyager: # Second Quest under General Category, you can add unlimited
-      name: "Example 2"
+        - "givemoney 1200 {PLAYER}"
+    Voyager: # Second Quest under General Category, you can add unlimited
+      name: "Voyager"
       description: "Move 100 blocks"
       type: move
       number: 100
       rewards:
-        - "give {PLAYER} steak 64"
-  Others: # Second Category, however you can add unlimited
-    example3:
-      name: "Example 3"
-      description: "Place 5 wood"
+        - "givemoney 1800 {PLAYER}"
+  Placing: # Second Category, however you can add unlimited
+    Placing:
+      name: "Block Placing"
+      description: "Place 55 wood"
       type: placeblock
       block: "17"
-      number: 5
+      number: 55
       rewards:
         - "give {PLAYER} dirt 64"
-    killeveryone:
-      name: "Example 4"
-      description: "Kill 5 players"
+    Kill:
+      name: "Killer"
+      description: "Kill 25 players"
       type: kills
-      number: 5
+      number: 25
       rewards:
-        - "give {PLAYER} diamond 1"
+        - "givemoney 2800{PLAYER}"
 ...
